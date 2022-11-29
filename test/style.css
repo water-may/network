@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+    margin: 0;
+    
+}
+
+#body {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    min-height: 100%;
+    background-color: aqua;
+}
+
+#left-side {
+    width: 25%;
+    height: 100%;
+    background-color: blue;
+    border: solid 3px white;
+}
+
+#mid-side {
+    width: 50%;
+    background-color: rgb(255, 0, 0);
+    border: solid 3px white;
+
+}
+
+#right-side {
+    width: 25%;
+    background-color: blue;
+    border: solid 3px white;
+}

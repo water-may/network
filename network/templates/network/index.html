@@ -1,0 +1,41 @@
+{% extends "network/layout.html" %}
+{% load static %}
+{% block script %}
+<script src="{% static 'network/index.js' %}" type="module"></script>
+<!-- <script src="{% static 'network/main.js' %}"></script> -->
+{% endblock %}
+{% block body %}
+    {% if following == True %}
+    <script>
+        load_posts('following');
+    </script>
+    {% endif %}
+    {% if user.is_authenticated %}
+    <div id="page-title"></div>
+
+    <div id="post-form-cntnr">
+      
+        <form id="post-form" action="{% url 'post' 'all' '1' %}" method="POST">
+            <div id="new-post">New post</div>
+            <div id="post-text-box" class="post-elm">
+                <textarea column=8 name="post" class="post-text" placeholder="What's happening?"></textarea>
+            </div>
+            
+            <div id="post-submit" class="post-elm">
+                <input type="submit" id="post-btn" value="Post">
+            </div>
+        </form>
+    </div>
+
+    <div id="posts-view-container">
+        
+    </div>
+    
+    {% endif %}
+    <div id="page-nav-box">
+        <div id="page-nav">
+        </div>
+    </div>
+   
+{% endblock %}
+
